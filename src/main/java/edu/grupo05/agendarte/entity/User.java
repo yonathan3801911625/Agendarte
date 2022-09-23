@@ -28,4 +28,5 @@ public class User {
     private String userAddress;
     private String userTelephone;
     private String userMail;
+    private String userGender;
 }

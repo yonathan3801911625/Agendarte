@@ -1,6 +1,5 @@
 package edu.grupo05.agendarte.service;
 
-
 import edu.grupo05.agendarte.entity.User;
 import edu.grupo05.agendarte.repository.UserRepository;
 
@@ -83,6 +82,13 @@ public class UserServiceImpl implements UserService {
                 user.getUserMail())) {
             usuarioDB.setUserMail(
                     user.getUserMail());
+        }
+
+        if (Objects.nonNull(user.getUserGender())
+                && !"".equalsIgnoreCase(
+                user.getUserGender())) {
+            usuarioDB.setUserGender(
+                    user.getUserGender());
         }
 
         return userRepository.save(usuarioDB);
