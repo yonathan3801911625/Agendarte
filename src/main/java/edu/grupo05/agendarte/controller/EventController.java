@@ -1,13 +1,11 @@
 package edu.grupo05.agendarte.controller;
 
 import edu.grupo05.agendarte.entity.Event;
-import edu.grupo05.agendarte.entity.User;
 import edu.grupo05.agendarte.service.EventService;
 import java.util.List;
 import javax.validation.Valid;
 
 // Importing required classes
-import edu.grupo05.agendarte.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

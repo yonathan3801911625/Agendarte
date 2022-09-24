@@ -6,10 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 // Annotations
 @Entity
@@ -20,10 +18,16 @@ import javax.persistence.Id;
 
 public class Music {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long musicId;
     private String musicTitle;
     private String musicGenre;
     private String musicAuthor;
     private String musicDuration;
+
+
+    // Mapping to the other table
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<Event> event;
+    public long getMusicId() { return musicId; }
 }
