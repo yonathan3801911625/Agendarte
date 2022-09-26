@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 // Annotation
 @RestController
-
-
 public class UserController {
 
     // Annotation

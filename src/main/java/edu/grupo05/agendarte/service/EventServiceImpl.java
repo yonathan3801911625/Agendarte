@@ -1,8 +1,5 @@
 package edu.grupo05.agendarte.service;
 
-
-
-
 import edu.grupo05.agendarte.entity.Event;
 import edu.grupo05.agendarte.repository.EventRepository;
 
@@ -14,9 +11,6 @@ import org.springframework.stereotype.Service;
 
 // Annotation
 @Service
-
-
-
 public class EventServiceImpl implements EventService {
 
     @Autowired

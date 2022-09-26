@@ -29,5 +29,4 @@ public class Music {
     // Mapping to the other table
     @OneToMany(cascade = CascadeType.ALL)
     private Set<Event> event;
-    public long getMusicId() { return musicId; }
 }

@@ -13,7 +13,7 @@ import java.util.Date;
 // Annotations
 @Entity
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 
@@ -29,7 +29,7 @@ public class Event {
     private String eventType;
     private String eventCategory;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
-    @Column(name = "eventDate")
+//    @Column(name = "eventDate")
     private Date eventDate;
     private String eventPlace;
     private String eventAddress;
@@ -40,29 +40,30 @@ public class Event {
     @ManyToOne
     //Adding the name
     @JoinColumn(name = "userId")
-    User user;
+    User fkUser;
 
     // Mapping the column of this table
     @ManyToOne
     //Adding the name
     @JoinColumn(name = "musicId")
-    Music music;
+    Music fkMusic;
 
 
-//    Event() {}
+    Event() {}
 
-//    public Event(long id, String nam, String prod, String des, String tip, String cat, Date dat, String pla, String add, String cit, User objuser )
-//    {
-//        this.eventId = id;
-//        this.eventName=nam;
-//        this.eventProductor=prod;
-//        this.eventDescript=des;
-//        this.eventType=tip;
-//        this.eventCategory=cat;
-//        this.eventDate=dat;
-//        this.eventPlace=pla;
-//        this.eventAddress=add;
-//        this.eventCity=cit;
-//        this.user=objuser;
-//    }
+    public Event(long id, String nam, String prod, String des, String tip, String cat, Date dat, String pla, String add, String cit, User objuser, Music objmusic )
+    {
+        this.eventId = id;
+        this.eventName=nam;
+        this.eventProductor=prod;
+        this.eventDescript=des;
+        this.eventType=tip;
+        this.eventCategory=cat;
+        this.eventDate=dat;
+        this.eventPlace=pla;
+        this.eventAddress=add;
+        this.eventCity=cit;
+        this.fkUser=objuser;
+        this.fkMusic=objmusic;
+    }
 }

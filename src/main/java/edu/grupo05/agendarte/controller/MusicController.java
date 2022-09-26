@@ -9,12 +9,13 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+// Annotation
+@RestController
 public class MusicController {
 
 
     // Annotation
-    @Autowired
-    private MusicService musicService;
+    @Autowired private MusicService musicService;
 
     // Save operation
     @PostMapping("/musics")
