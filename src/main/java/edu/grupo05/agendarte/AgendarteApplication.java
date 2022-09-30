@@ -8,8 +8,8 @@ import edu.grupo05.agendarte.repository.*;
 import edu.grupo05.agendarte.entity.*;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-//@SpringBootApplication
-@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
+@SpringBootApplication
+//@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
 public class AgendarteApplication {
 
 	public static void main(String[] args) {

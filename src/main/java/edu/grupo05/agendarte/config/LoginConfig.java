@@ -15,8 +15,8 @@
 //    @Override
 //    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 //        auth.inMemoryAuthentication()
-//                .withUser("yona")
-//                .password("123456")
+//                .withUser("yon")
+//                .password("1234")
 //                .roles("admin_role")
 //                .and()
 //                .withUser("andru")
